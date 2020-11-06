@@ -1,19 +1,20 @@
+.container {
+  width: 600px;
+  position: relative;
+  padding:50px;
+  background-color: tomato;
+  
+}
 .main {
   width: 300px;
   height :400px;
   margin: 0 auto;
-  padding-top: 70px;
   background-color: skyblue;
   border: 2px solid black;
   margin: 0 auto;
   text-align: center;
   position:relative;
-  padding: 30px 20px;
 }
-
-
-
-  
 
 
 /* render 1 */
@@ -35,30 +36,78 @@
   margin: 20px 0;
 }
 
-
 main > span {
   display: block;
 }
 
-.job {
-  width: 200px;
-  margin:20px auto;
-  display: none;
-  background-color: #bbb;
-}
-.job::after{
-  content:'';
-  display: block;
-  clear: both;
-}
-.job > button {
-width:150px;
-height:50px;
-margin:10px;
-border:1px solid red;
+/* logo */
+.wrap2,
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height :400px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
+  overflow: hidden;
+  box-sizing: border-box;
 }
+.wrap {
+  background-color: #fff;
+}
+h1 {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  background-color: green;
+  background: url(/img/logo.jpg) no-repeat;
+  background-size: contain;
+  text-indent:-9999px;
+  text-overflow: ellipsis;
+}
+.loading {
+  animation-duration: 3s;
+  animation-name: load;
+  animation-fill-mode: forwards;
+  /* transform: translateY(-500px); */
+}
+@keyframes load{
+  0% {
+  /* transform: translateY(0); */
+  transform: translate3d(0);
+  }
+
+  100% {
+    /* transform: translateY(-500px); */
+    transform: translate3d(0, -500px, 0);
+    /* height: 0; */
+    /* padding:0 20px; */
+  }
+}
+
 /* 랜딩2 */
+  /* .job {
+    width: 200px;
+    margin:20px auto;
+    display: none;
+    background-color: #bbb;
+  }
+  .job::after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+  .job > button {
+  width:150px;
+  height:50px;
+  margin:10px;
+  border:1px solid red;
+  }
 .job > .prev {
   width:30px;
   height:30px;
@@ -68,11 +117,11 @@ border:1px solid red;
   overflow: hidden;
   text-indent: -9999px;
   background:url(./imgs/prev.png) no-repeat;
-}
+} */
 
 /* 랜딩 3 */
 
-.main h2, p {
+/* .main h2, p {
   text-align: center;
   font-size: 15px;
   font-weight: 800;
@@ -110,12 +159,12 @@ border:1px solid red;
   height: 200px;
   text-align: center;
   border: 2px solid;
-}
+} */
 
 
 
 /* 랜딩 4*/
-.main:nth-child(4) {
+/* .main:nth-child(4) {
 }
 
 .battle figure{
@@ -131,4 +180,4 @@ border:1px solid red;
   background-color: green;
 }
 
-
+ */

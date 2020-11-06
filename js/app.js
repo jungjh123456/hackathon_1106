@@ -1,14 +1,16 @@
-const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
-
+const $wrap = document.querySelector('.wrap');
 const $singer = document.querySelector('.singer');
+const $next = document.querySelector('.next');
 let jobKey = '';
-
-
 //gender 선택 시작
-
 const $gender = document.querySelector('.gender');
 let genderChoice;
+
+// 로고 애니메이션
+$wrap.onclick = () => {
+  $wrap.classList.add('loading');
+};
 
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
@@ -33,6 +35,7 @@ $next.onclick = e => {
     alert('성별을 선택하세요!');
     return;
   };
+
 $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
@@ -46,3 +49,4 @@ $job.onclick = e => {
   }
   console.log(jobkey);
 }
+};
