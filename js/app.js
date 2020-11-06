@@ -74,10 +74,10 @@ let genderChoice;
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
   if(e.target.matches ('.gender > .woman')){
-    genderChoice = 'W'
+    genderChoice = 'w'
   }
   else if(e.target.matches('.gender > .man')){
-    genderChoice = 'M'
+    genderChoice = 'm'
   } else return; 
 }
 //gender 선택 끝
