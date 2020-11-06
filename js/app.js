@@ -47,5 +47,5 @@ $job.onclick = e => {
   } else {
     jobkey = 'all'
   }
-  console.log(jobkey);
+  console.log(jobKey);
 }
