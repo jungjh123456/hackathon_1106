@@ -1,26 +1,9 @@
 const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
-
 const $singer = document.querySelector('.singer');
 let jobKey = '';
 
-
-//gender 선택 시작
-
-const $gender = document.querySelector('.gender');
-let genderChoice;
-
-//gender 선택 이벤트 핸들러 등록
-$gender.onclick = e => {
-  if(e.target.matches ('.gender > .woman')){
-    genderChoice = 'w'
-  }
-  else if(e.target.matches('.gender > .man')){
-    genderChoice = 'm'
-  } else return; 
-}
-//gender 선택 끝
-
+// 랜덤 함수
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -33,16 +16,20 @@ $next.onclick = e => {
     alert('성별을 선택하세요!');
     return;
   };
-$job.onclick = e => {
+
+  // job 온클릭
+  $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
     $gender.classList.add('active');
   } else if (e.target.matches('.job > .singer')){
-    jobkey = 'singer'
+    jobKey = 'singer'
   } else if (e.target.matches('.job > .actor')) {
-    jobkey = 'actor'
-  } else {
-    jobkey = 'all'
-  }
-  console.log(jobkey);
+    jobKey = 'actor'
+  } else if(e.target.matches('.job > .all')){
+    jobKey = 'all'
+  } else if(e.target.matches('.job > .start')){
+    if (jobKey === '') return;
+    console.log(jobKey);
+  }  
 }
