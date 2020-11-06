@@ -55,23 +55,58 @@ $battle.onclick = e => {
 
   console.log(count);
   count = count + 1;
-  
+  ranDom(16);
+  randomItem();
   if (count === 8) {
     $h3.textContent = '8강';
+    ranDom(8);
+    randomItem();
   } else if(count === 12) {
     $h3.textContent = '4강';
+    ranDom(4);
+    randomItem();
   } else if(count === 16){
     $h3.textContent = '결승'
     count = 0;
   }
 }
-let newArr = [];
+let newArr = [
+  { id: 1, job: 'singer', content: '김동현' , path: '../남자아이돌/김동현.jpg', gender: 'm' ,lank: 0},
+  { id: 2, job: 'singer', content: '김상균' , path: '../남자아이돌/김상균.jpg', gender: 'm' ,lank: 0},
+  { id: 3, job: 'singer', content: '김지범' , path: '../남자아이돌/김지범.jpg', gender: 'm' ,lank: 0},
+  { id: 4, job: 'singer', content: '김태영' , path: '../남자아이돌/김태영.jpg', gender: 'm' ,lank: 0},
+  { id: 5, job: 'singer', content: '대준' , path: '../남자아이돌/대준.jpg', gender: 'm' ,lank: 0},
+  { id: 6, job: 'singer', content: '성민' , path: '../남자아이돌/성민.jpg', gender: 'm' ,lank: 0},
+  { id: 7, job: 'singer', content: '슬로우모션' , path: '../남자아이돌/슬로우모션.jpg', gender: 'm' ,lank: 0},
+  { id: 8, job: 'singer', content: '웨비' , path: '../남자아이돌/웨비.jpg', gender: 'm' ,lank: 0},
+  { id: 9, job: 'singer', content: '이태용' , path: '../남자아이돌/이태용.jpg', gender: 'm' ,lank: 0},
+  { id: 10,job: 'singer',  content: '재범' , path: '../남자아이돌/재범.jpg', gender: 'm' ,lank: 0},
+  { id: 11,job: 'singer',  content: '정국' , path: '../남자아이돌/정국.jpg', gender: 'm' ,lank: 0},
+  { id: 12,job: 'singer',  content: '제이홉' , path: '../남자아이돌/제이홉.jpg', gender: 'm' ,lank: 0},
+  { id: 13,job: 'singer',  content: '최수빈' , path: '../남자아이돌/최수빈.jpg', gender: 'm' ,lank: 0},
+  { id: 14,job: 'singer',  content: '포맨' , path: '../남자아이돌/포맨.jpg', gender: 'm' ,lank: 0},
+  { id: 15,job: 'singer',  content: '포틴' , path: '../남자아이돌/포틴.jpg', gender: 'm' ,lank: 0},
+  { id: 16,job: 'singer',  content: 'boy' , path: '../남자아이돌/boy.jpg', gender: 'm' ,lank: 0}
+];
 let numArr = [];
+
+const ranDom = num => {
+while (!(numArr.length === num)){
+  while (1){
+    let num = getRandomInt(0, num)
+    if(!numArr.includes(num)){
+     numArr.push(num);
+     break;
+    }   
+  }
+}
+}
 
 const randomItem = () => {
   newArr = newArr.map((item, i, arr) => arr[numArr[i]]);
-  return newArr;
 }
+
+
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -79,13 +114,4 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 }
 
-while (!(numArr.length === 16)){
-  while (1){
-    let num = getRandomInt(1, 17)
-    if(!numArr.includes(num)){
-     numArr.push(num);
-     break;
-    }   
-  }
-}
 
