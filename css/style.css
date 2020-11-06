@@ -4,3 +4,25 @@
   background-color: skyblue;
   border: 2px solid black;
 }
+
+
+
+
+
+/* 랜딩 4*/
+.main:nth-child(4) {
+}
+
+.battle figure{
+  width : 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+.battle figure img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+
