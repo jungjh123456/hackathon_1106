@@ -2,18 +2,19 @@ const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
 const $next = document.querySelector('.gender > .next')
 const $singer = document.querySelector('.singer');
-
 const $start = document.querySelector('.start');
-let jobKey = '';
+const $battle = document.querySelector('.battle');
+const $h3 = document.querySelector('.battle h3');
+const $leftImg = document.querySelector('.left > img');
+const $rightImg = document.querySelector('.right > img');
+
 //gender 선택 시작
+let jobKey = '';
 let genderChoice ='';
 let NewidealType = [];
 let numArr = [];
-
-const $battle = document.querySelector('.battle');
-const $h3 = document.querySelector('.battle h3');
 let count = 0;
-
+let check = [];
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -76,11 +77,15 @@ $job.onclick = e => {
 
 $start.onclick = () => {
    NewidealType = idealType.filter(ideal => {
-    return jobkey==='all'? ideal.gender === genderChoice : 
+    return jobkey==='all' ? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
   });
-  ranDom(16)
+  jobkey === 'all' ?  ranDom(32) : ranDom(16)
   randomItem(NewidealType);
+
+  $job.classList.remove('active');
+  $battle.classList.add('active');
+  matchImage();
 
  } 
 
@@ -92,11 +97,15 @@ $start.onclick = () => {
 
 console.log($battle);
 $battle.onclick = e => {
-    
+  if (e.target === $leftImg) {
+    NewidealType[0].lank = 1;
+  } else {
+    NewidealType[0].lank = 1;
+  }
+  matchImage(n)
   console.log(count);
   count = count + 1;
-  ranDom(16);
-  randomItem();
+
   if (count === 8) {
     $h3.textContent = '8강';
   } else if(count === 12) {
@@ -106,10 +115,16 @@ $battle.onclick = e => {
 
   }
 }
-let check = [];
-const matchImage = () => {
-NewidealType.
+
+const matchImage = (n = 0) => {
+  $leftImg.setAttribute('src', NewidealType[n].path);
+  $rightImg.setAttribute('src', NewidealType[n+1].path);
+  console.log(NewidealType)
 }
+
+
+
+
 
 
 
