@@ -74,24 +74,19 @@ h1 {
   animation-duration: 3s;
   animation-name: load;
   animation-fill-mode: forwards;
-  /* transform: translateY(-500px); */
 }
 @keyframes load{
   0% {
-  /* transform: translateY(0); */
   transform: translate3d(0);
   }
 
   100% {
-    /* transform: translateY(-500px); */
     transform: translate3d(0, -500px, 0);
-    /* height: 0; */
-    /* padding:0 20px; */
   }
 }
 
 /* 랜딩2 */
-  /* .job {
+  .job {
     width: 200px;
     margin:20px auto;
     display: none;
@@ -117,11 +112,11 @@ h1 {
   overflow: hidden;
   text-indent: -9999px;
   background:url(./imgs/prev.png) no-repeat;
-} */
+}
 
 /* 랜딩 3 */
 
-/* .main h2, p {
+.main h2, p {
   text-align: center;
   font-size: 15px;
   font-weight: 800;
@@ -159,12 +154,12 @@ h1 {
   height: 200px;
   text-align: center;
   border: 2px solid;
-} */
+}
 
 
 
 /* 랜딩 4*/
-/* .main:nth-child(4) {
+.main:nth-child(4) {
 }
 
 .battle figure{
@@ -179,4 +174,4 @@ h1 {
   height: 150px;
   background-color: green;
 }
- */
+
