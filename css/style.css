@@ -3,4 +3,53 @@
   height :400px;
   background-color: skyblue;
   border: 2px solid black;
+  padding: 30px 20px;
+}
+
+/* 랜딩 3 */
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.main h2, p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+.main:nth-child(3) {
+  position: relative;
+}
+.main:nth-child(3) .battle {
+  display: flex;
+  margin-top: 30px;
+}
+
+.main:nth-child(3) h2 {
+  color: #abd5bd;
+  margin-bottom: 10px;
+}
+
+.main:nth-child(3) .battle h3 {
+  position: absolute;
+  top: 75px;
+  left: 155px;
+  color: white;
+}
+
+.main:nth-child(3) .left {
+  display: flex;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  border: 2px solid;
+}
+.main:nth-child(3) .right {
+  display: flex;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  border: 2px solid;
 }
