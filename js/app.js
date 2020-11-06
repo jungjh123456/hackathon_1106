@@ -2,10 +2,19 @@ const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
 const $next = document.querySelector('.gender > .next')
 const $singer = document.querySelector('.singer');
+
 const $start = document.querySelector('.start');
 let jobKey = '';
 //gender 선택 시작
 let genderChoice ='';
+
+const $battle = document.querySelector('.battle');
+const $h3 = document.querySelector('.battle h3');
+let jobKey = '';
+let count = 0;
+//gender 선택 시작
+let genderChoice;
+
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
   if(e.target.matches('.gender > next')) return;
@@ -44,6 +53,7 @@ $job.onclick = e => {
     jobkey = 'singer'
   } else if (e.target.matches('.job > .actor')) {
     jobkey = 'actor'
+
   } else if(e.target.matches('.job > .all')){
     jobkey = 'all'
   } else return;
@@ -55,6 +65,11 @@ $start.onclick = () => {
     return jobkey==='all'? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
   })
+  } else {
+    jobkey = 'all'
+  }
+  console.log(jobKey);
+
 }
 
 console.log($battle);
@@ -72,4 +87,8 @@ $battle.onclick = e => {
     $h3.textContent = '결승'
     count = 0;
   }
+
 }
+
+}
+
