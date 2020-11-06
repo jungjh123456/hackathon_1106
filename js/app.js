@@ -10,10 +10,10 @@ let genderChoice ='';
 
 const $battle = document.querySelector('.battle');
 const $h3 = document.querySelector('.battle h3');
-let jobKey = '';
+
 let count = 0;
-//gender 선택 시작
-let genderChoice;
+
+
 
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
@@ -65,11 +65,7 @@ $start.onclick = () => {
     return jobkey==='all'? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
   })
-  } else {
-    jobkey = 'all'
-  }
-  console.log(jobKey);
-
+  
 }
 
 console.log($battle);
@@ -90,5 +86,5 @@ $battle.onclick = e => {
 
 }
 
-}
+
 
