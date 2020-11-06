@@ -5,6 +5,7 @@
   padding-top: 70px;
   background-color: skyblue;
   border: 2px solid black;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -21,3 +22,69 @@
 main > span {
   display: block;
 }
+
+
+
+/* 랜딩 3 */
+
+.main h2, p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+.main:nth-child(3) {
+  position: relative;
+}
+.main:nth-child(3) .battle {
+  display: flex;
+  margin-top: 30px;
+}
+
+.main:nth-child(3) h2 {
+  color: #abd5bd;
+  margin-bottom: 10px;
+}
+
+.main:nth-child(3) .battle h3 {
+  position: absolute;
+  top: 75px;
+  left: 155px;
+  color: white;
+}
+
+.main:nth-child(3) .left {
+  display: flex;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  border: 2px solid;
+}
+.main:nth-child(3) .right {
+  display: flex;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  border: 2px solid;
+}
+
+
+
+/* 랜딩 4*/
+.main:nth-child(4) {
+}
+
+.battle figure{
+  width : 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+.battle figure img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+
+
+
