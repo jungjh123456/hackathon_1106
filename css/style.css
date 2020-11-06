@@ -18,13 +18,23 @@
 
 /* render 1 */
 .gender {
+  display: none;
   background-color: tomato;
 }
+
+.gender.active, .job.active {
+  display: block;
+}
+.battle.active {
+  display: flex;
+}
+
 .gender > button {
   width: 200px;
   height: 60px;
   margin: 20px 0;
 }
+
 
 main > span {
   display: block;
@@ -33,7 +43,7 @@ main > span {
 .job {
   width: 200px;
   margin:20px auto;
-
+  display: none;
   background-color: #bbb;
 }
 .job::after{
@@ -70,8 +80,8 @@ border:1px solid red;
 .main:nth-child(3) {
   position: relative;
 }
-.main:nth-child(3) .battle {
-  display: flex;
+.battle {
+  display: none;
   margin-top: 30px;
 }
 
