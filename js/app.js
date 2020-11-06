@@ -1,17 +1,16 @@
 const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
-
+const $next = document.querySelector('.gender > .next')
 const $singer = document.querySelector('.singer');
 let jobKey = '';
 
 
 //gender 선택 시작
-
-const $gender = document.querySelector('.gender');
 let genderChoice;
 
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
+  if(e.target.matches('.gender > next')) return;
   if(e.target.matches ('.gender > .woman')){
     genderChoice = 'w'
   }
@@ -33,6 +32,10 @@ $next.onclick = e => {
     alert('성별을 선택하세요!');
     return;
   };
+  e.target.parentNode.classList.remove('active');
+  $job.classList.add('active');
+  console.log($job);
+}
 $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
