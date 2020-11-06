@@ -24,6 +24,8 @@ function getRandomInt(min, max) {
 }
 // next 버튼을 누르면 gender에 active 삭제, job에 active 추가하는 이벤트 핸들러
 $next.onclick = e => {
+
+
   if ( !genderChoice ) {
     alert('성별을 선택하세요!');
     return;
@@ -36,6 +38,8 @@ $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
     $gender.classList.add('active');
+    jobKey = '';
+    genderChoice = '';
   } else if (e.target.matches('.job > .singer')){
     jobkey = 'singer'
   } else if (e.target.matches('.job > .actor')) {
@@ -51,4 +55,21 @@ $start.onclick = () => {
     return jobkey==='all'? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
   })
+}
+
+console.log($battle);
+
+$battle.onclick = e => {
+
+  console.log(count);
+  count = count + 1;
+  
+  if (count === 8) {
+    $h3.textContent = '8강';
+  } else if(count === 12) {
+    $h3.textContent = '4강';
+  } else if(count === 16){
+    $h3.textContent = '결승'
+    count = 0;
+  }
 }
