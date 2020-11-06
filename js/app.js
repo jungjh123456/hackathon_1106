@@ -27,7 +27,12 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 }
 
-
+// next 버튼을 누르면 gender에 active 삭제, job에 active 추가하는 이벤트 핸들러
+$next.onclick = e => {
+  if ( !genderChoice ) {
+    alert('성별을 선택하세요!');
+    return;
+  };
 $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
