@@ -7,6 +7,8 @@ const $start = document.querySelector('.start');
 let jobKey = '';
 //gender 선택 시작
 let genderChoice ='';
+let NewidealType = [];
+let numArr = [];
 
 const $battle = document.querySelector('.battle');
 const $h3 = document.querySelector('.battle h3');
@@ -15,6 +17,24 @@ let count = 0;
 
 
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+}
+
+
+const ranDom = n => {
+  while (!(numArr.length === n)){
+    while (1){
+      let num = getRandomInt(0, n)
+      if(!numArr.includes(num)){
+       numArr.push(num);
+       break;
+      }   
+    }
+  }
+}
 //gender 선택 이벤트 핸들러 등록
 $gender.onclick = e => {
   if(e.target.matches('.gender > next')) return;
@@ -26,15 +46,9 @@ $gender.onclick = e => {
   } else return; 
 }
 //gender 선택 끝
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
-}
+
 // next 버튼을 누르면 gender에 active 삭제, job에 active 추가하는 이벤트 핸들러
 $next.onclick = e => {
-
-
   if ( !genderChoice ) {
     alert('성별을 선택하세요!');
     return;
@@ -43,6 +57,7 @@ $next.onclick = e => {
   $job.classList.add('active');
   console.log($job);
 }
+
 $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
@@ -60,30 +75,44 @@ $job.onclick = e => {
 
   console.log(jobkey);
 }
+
 $start.onclick = () => {
-  const NewidealType = idealType.filter(ideal => {
+   NewidealType = idealType.filter(ideal => {
     return jobkey==='all'? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
+
+  });
+  ranDom(16)
+  randomItem(NewidealType);
+
+ } 
+
+ const randomItem = () => {
+  NewidealType = NewidealType.map((item, i, arr) => arr[numArr[i]]);
+  }
+  
+
+
   })
   
 }
 
+
 console.log($battle);
-
 $battle.onclick = e => {
-
+  
   console.log(count);
   count = count + 1;
-  
+  ranDom(16);
+  randomItem();
   if (count === 8) {
     $h3.textContent = '8강';
   } else if(count === 12) {
     $h3.textContent = '4강';
   } else if(count === 16){
     $h3.textContent = '결승'
-    count = 0;
-  }
 
+  }
 }
 
 
