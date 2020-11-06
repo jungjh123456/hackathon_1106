@@ -5,9 +5,16 @@
   padding-top: 70px;
   background-color: skyblue;
   border: 2px solid black;
-  padding: 30px 20px;
+  margin: 0 auto;
   text-align: center;
+  position:relative;
+  padding: 30px 20px;
 }
+
+
+
+  
+
 
 /* render 1 */
 .gender {
@@ -23,7 +30,35 @@ main > span {
   display: block;
 }
 
+.job {
+  width: 200px;
+  margin:20px auto;
 
+  background-color: #bbb;
+}
+.job::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.job > button {
+width:150px;
+height:50px;
+margin:10px;
+border:1px solid red;
+
+}
+/* 랜딩2 */
+.job > .prev {
+  width:30px;
+  height:30px;
+  position: absolute;
+  top:47%;
+  left: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  background:url(./imgs/prev.png) no-repeat;
+}
 
 /* 랜딩 3 */
 
@@ -85,6 +120,5 @@ main > span {
   height: 150px;
   background-color: green;
 }
-
 
 
