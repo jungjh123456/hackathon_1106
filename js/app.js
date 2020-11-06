@@ -2,7 +2,10 @@ const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
 const $next = document.querySelector('.gender > .next')
 const $singer = document.querySelector('.singer');
+const $battle = document.querySelector('.battle');
+const $h3 = document.querySelector('.battle h3');
 let jobKey = '';
+let count = 0;
 //gender 선택 시작
 let genderChoice;
 //gender 선택 이벤트 핸들러 등록
@@ -23,6 +26,8 @@ function getRandomInt(min, max) {
 }
 // next 버튼을 누르면 gender에 active 삭제, job에 active 추가하는 이벤트 핸들러
 $next.onclick = e => {
+
+
   if ( !genderChoice ) {
     alert('성별을 선택하세요!');
     return;
@@ -45,4 +50,21 @@ $job.onclick = e => {
     jobkey = 'all'
   }
   console.log(jobKey);
+}
+
+console.log($battle);
+
+$battle.onclick = e => {
+
+  console.log(count);
+  count = count + 1;
+  
+  if (count === 8) {
+    $h3.textContent = '8강';
+  } else if(count === 12) {
+    $h3.textContent = '4강';
+  } else if(count === 16){
+    $h3.textContent = '결승'
+    count = 0;
+  }
 }
