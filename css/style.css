@@ -67,7 +67,7 @@ border:1px solid red;
   left: 0;
   overflow: hidden;
   text-indent: -9999px;
-  background:url(./imgs/prev.png) no-repeat;
+  /* background:url(./imgs/prev.png) no-repeat; */
 }
 
 /* 랜딩 3 */
