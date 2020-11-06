@@ -1,4 +1,5 @@
 const idealType = [
+
   { id: 1, job: 'singer', content: '김동현' , path: '../남자아이돌/김동현.jpg', gender: 'm' ,lank: 0},
   { id: 2, job: 'singer', content: '김상균' , path: '../남자아이돌/김상균.jpg', gender: 'm' ,lank: 0},
   { id: 3, job: 'singer', content: '김지범' , path: '../남자아이돌/김지범.jpg', gender: 'm' ,lank: 0},
@@ -69,3 +70,4 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 }
+
