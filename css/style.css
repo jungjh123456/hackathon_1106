@@ -3,4 +3,38 @@
   height :400px;
   background-color: skyblue;
   border: 2px solid black;
+  margin: 0 auto;
+  text-align: center;
+  position:relative;
+  padding-top:30px
+}
+
+.job {
+  width: 200px;
+  margin:20px auto;
+
+  background-color: #bbb;
+}
+.job::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.job > button {
+width:150px;
+height:50px;
+margin:10px;
+border:1px solid red;
+
+}
+
+.job > .prev {
+  width:30px;
+  height:30px;
+  position: absolute;
+  top:47%;
+  left: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  background:url(./imgs/prev.png) no-repeat;
 }
