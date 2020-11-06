@@ -8,12 +8,6 @@
 
 /* 랜딩 3 */
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .main h2, p {
   text-align: center;
   font-size: 15px;
@@ -53,3 +47,25 @@
   text-align: center;
   border: 2px solid;
 }
+=======
+}
+
+
+/* 랜딩 4*/
+.main:nth-child(4) {
+}
+
+.battle figure{
+  width : 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+.battle figure img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+
+
