@@ -92,7 +92,7 @@ $start.onclick = () => {
 
 console.log($battle);
 $battle.onclick = e => {
-  
+    
   console.log(count);
   count = count + 1;
   ranDom(16);
@@ -106,7 +106,10 @@ $battle.onclick = e => {
 
   }
 }
-
+let check = [];
+const matchImage = () => {
+NewidealType.
+}
 
 
 
