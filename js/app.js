@@ -12,7 +12,9 @@ let numArr = [];
 
 const $battle = document.querySelector('.battle');
 const $h3 = document.querySelector('.battle h3');
+
 let count = 0;
+
 
 
 function getRandomInt(min, max) {
@@ -78,6 +80,7 @@ $start.onclick = () => {
    NewidealType = idealType.filter(ideal => {
     return jobkey==='all'? ideal.gender === genderChoice : 
     ideal.gender === genderChoice && ideal.job === jobkey 
+
   });
   ranDom(16)
   randomItem(NewidealType);
@@ -88,6 +91,11 @@ $start.onclick = () => {
   NewidealType = NewidealType.map((item, i, arr) => arr[numArr[i]]);
   }
   
+
+
+  })
+  
+}
 
 
 console.log($battle);
@@ -106,9 +114,6 @@ $battle.onclick = e => {
 
   }
 }
-
-
-
 
 
 
