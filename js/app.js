@@ -64,3 +64,6 @@ const idealType = [
     { id: 63, job: 'actor', content: '송하윤', path: '../여자배우/송하윤.jpeg', gender: 'w', lank: 0 },
     { id: 64, job: 'actor', content: '정소민', path: '../여자배우/정소민.jpeg', gender: 'w', lank: 0 },
   ]
+
+
+
