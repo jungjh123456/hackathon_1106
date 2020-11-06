@@ -64,7 +64,25 @@ const idealType = [
   { id: 62, job: 'actor', content: '손예찐', path: '../여자배우/손예찐.jpeg', gender: 'w', lank: 0 },
   { id: 63, job: 'actor', content: '송하윤', path: '../여자배우/송하윤.jpeg', gender: 'w', lank: 0 },
   { id: 64, job: 'actor', content: '정소민', path: '../여자배우/정소민.jpeg', gender: 'w', lank: 0 },
+
 ]
+//gender 선택 시작
+
+const $gender = document.querySelector('.gender');
+let genderChoice;
+
+//gender 선택 이벤트 핸들러 등록
+$gender.onclick = e => {
+  if(e.target.matches ('.gender > .woman')){
+    genderChoice = 'W'
+  }
+  else if(e.target.matches('.gender > .man')){
+    genderChoice = 'M'
+  } else return; 
+}
+//gender 선택 끝
+
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
