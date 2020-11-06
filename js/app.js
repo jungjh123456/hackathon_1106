@@ -1,6 +1,10 @@
 const $gender = document.querySelector('.gender');
 const $job = document.querySelector('.job');
 
+const $singer = document.querySelector('.singer');
+let jobKey = '';
+
+
 //gender 선택 시작
 
 const $gender = document.querySelector('.gender');
@@ -17,8 +21,6 @@ $gender.onclick = e => {
 }
 //gender 선택 끝
 
-
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -30,5 +32,12 @@ $job.onclick = e => {
   if (e.target.matches('.job > .prev')) {
     $job.classList.remove('active');
     $gender.classList.add('active');
+  } else if (e.target.matches('.job > .singer')){
+    jobkey = 'singer'
+  } else if (e.target.matches('.job > .actor')) {
+    jobkey = 'actor'
+  } else {
+    jobkey = 'all'
   }
+  console.log(jobkey);
 }
