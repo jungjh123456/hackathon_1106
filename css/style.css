@@ -1,10 +1,29 @@
 .main {
   width: 300px;
   height :400px;
+  margin: 0 auto;
+  padding-top: 70px;
   background-color: skyblue;
   border: 2px solid black;
   padding: 30px 20px;
+  text-align: center;
 }
+
+/* render 1 */
+.gender {
+  background-color: tomato;
+}
+.gender > button {
+  width: 200px;
+  height: 60px;
+  margin: 20px 0;
+}
+
+main > span {
+  display: block;
+}
+
+
 
 /* 랜딩 3 */
 
@@ -47,8 +66,7 @@
   text-align: center;
   border: 2px solid;
 }
-=======
-}
+
 
 
 /* 랜딩 4*/
@@ -67,5 +85,6 @@
   height: 150px;
   background-color: green;
 }
+
 
 
